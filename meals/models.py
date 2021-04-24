@@ -7,7 +7,7 @@ class Meals(models.Model):
     description = models.TextField(max_length=500)
     people = models.IntegerField()
     price = models.DecimalField(decimal_places=2, max_digits=5)
-    preperation_time = models.IntegerField()
+    preparation_time = models.IntegerField()
     image = models.ImageField(upload_to='meals/')
     slug = models.SlugField(blank=True, null=True)
 
