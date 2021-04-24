@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Meal(models.Model):
+class Meals(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField(max_length=500)
     people = models.IntegerField()
