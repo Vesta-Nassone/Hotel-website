@@ -13,4 +13,7 @@ def meal_list(request):
 
 
 def meal_detail(request, slug):
-    pass
+    meal_detail = Meals.objects.get(slug=slug)
+    context = {'meal_detail': meal_detail}
+    
+    return render(request, 'Meals/detail.html', context)
