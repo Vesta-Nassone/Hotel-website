@@ -11,5 +11,10 @@ class Meals(models.Model):
     image = models.ImageField(upload_to='meals/')
     slug = models.SlugField(blank=True, null=True)
 
+def save(self, *args, **kwargs):
+    if not self.slug and self.name:
+        self.slug = slugify(self.name)
+    super(Meals, self).save(*args, **kwargs)
+    
 def __str__(self):
     return self.name
