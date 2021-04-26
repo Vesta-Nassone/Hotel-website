@@ -5,6 +5,7 @@ from django.utils.text import slugify
 class Meals(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField(max_length=500)
+    category = models.ForeignKey('Catergory', ond_delete=models.SET_NULL, null=True)
     people = models.IntegerField()
     price = models.DecimalField(decimal_places=2, max_digits=5)
     preparation_time = models.IntegerField()
