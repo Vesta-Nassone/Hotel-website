@@ -1,1 +1,1 @@
-# Restuarnt Site With Python and Django
+## Restaurant Site With Python and Django
