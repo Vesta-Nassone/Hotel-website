@@ -8,4 +8,8 @@ class Reservation(models.Model):
     number_of_people = models.models.IntegerField()
     date = models.models.DateField()
     time = models.models.TimeField()
+
+
+    def __str__(self):
+        return self.name
     
