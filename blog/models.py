@@ -11,12 +11,20 @@ class Post(models.Model):
     category = models.ForeignKey('Category', null=True, on_delete=models.SET_NULL)
     created = models.DateTimeField(default=timezone.now)
 
+    class Meta:
+        verbose_name = 'post'
+        verbose_name_plural = 'posts'
+
     def __str__(self):
         return self.title
     
    
 class Category(models.Model):
     category_name = models.CharField(max_length=50)
+
+    class Meta:
+        verbose_name = 'category'
+        verbose_name_plural = 'categories'
 
     def __str__(self):
         return self.category_name
