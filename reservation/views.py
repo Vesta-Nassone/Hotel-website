@@ -6,5 +6,11 @@ from .forms import ReserveTableForm
 
 
 def reserve_table(request):
-    context = {}
+    reserve_form = ReserveTableForm()
+    if request.method == 'POST':
+        reserve_form = ReserveTableForm(request.method)
+        if reserve_form.is_Valid():
+            reserve_form.save()
+
+    context = {'form': reserve_form}
     return render(request, 'Reservation/reservation.html', context)
