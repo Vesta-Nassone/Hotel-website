@@ -6,4 +6,5 @@ from .forms import ReserveTableForm
 
 
 def reserve_table(request):
-    pass
+    context = {}
+    return render(request, 'Reservation/reservation.html', context)
