@@ -5,4 +5,4 @@ from django import forms
 class ReserveTableForm(forms.ModelForm):
     class Meta:
         model = Reservation
-        fields = ("__alt__",)
+        fields = '__all__'
