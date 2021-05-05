@@ -10,6 +10,14 @@ class Post(models.Model):
     # tags
     category = models.ForeignKey('Category', null=True, on_delete=models.SET_NULL)
     created = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.title
+    
    
 class Category(models.Model):
     category_name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.category_name
+    
