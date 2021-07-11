@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'meals',
     'reservation',
     'blog',
-    'property',
 ]
 
 MIDDLEWARE = [
