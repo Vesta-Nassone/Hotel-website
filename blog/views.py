@@ -19,4 +19,4 @@ def post_detail(request, id):
         'post_detail': post_detail,
     }
 
-    return render(request, 'post/post_detail', context)
+    return render(request, 'post/post_detail.html', context)
