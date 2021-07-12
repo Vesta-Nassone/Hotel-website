@@ -11,7 +11,7 @@ def post_list(request):
         'posts_list': post_list
     }
 
-    return render(request, 'Post/post_list.html', context)
+    return render(request, 'post/post_list.html', context)
 
 def post_detail(request, id):
     pass
