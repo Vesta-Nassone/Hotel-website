@@ -5,7 +5,13 @@ from .models import Post, Category
 # Create your views here.
 
 def post_list(request):
-    pass
+    post_list = Post.objects.all()
+
+    context = {
+        'posts_list': post_list
+    }
+
+    return render(request, 'Post/post_list.html', context)
 
 def post_detail(request, id):
     pass
