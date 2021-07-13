@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'reservation',
     'blog',
     'bootstrap4',
+    'taggit',
 ]
 
 MIDDLEWARE = [
