@@ -28,15 +28,12 @@
 
     <div class="section">
       <div class="container">
-        
         <div class="row">
-
           <div class="col-md-8">
+          <!--Loads the detail content from db.-->
             <p>{{post_detail.content}}</p>
-            
             <div class="tag-widget post-tag-container mb-5 mt-5">
               <div class="tagcloud">
-                
                 {% for tag in post_detail.tags.all %}  
                     <a href="{% url 'blog:post_by_tag' tag %}" class="tag-cloud-link">{{tag.name}}</a>
                 {% endfor %}
@@ -47,7 +44,6 @@
             <div class="pt-5 mt-5">
               <h3 class="mb-5"> Comments</h3>
               <ul class="comment-list">
-                
                 {% for comment in comments %}
                   <li class="comment">
                     <div class="vcard bio">
@@ -58,9 +54,6 @@
                       <div class="meta">{{comment.created}}</div>
                       <p>{{comment.content}}</p>
                     </div>
-
-
-
                   </li>
                 {% endfor %}
               </ul>
