@@ -27,7 +27,12 @@ def post_detail(request, id):
     return render(request, 'post/post_detail.html', context)
 
 def post_by_tag(request, tag):
-    pass
+    post_by_tag = Post.objects.filter(tags__name__in=[tag])
+    context ={
+        'post_list': post_by_tag,
+    }
+
+    return render(request, 'post/post_list.html', context)
 
 def post_by_category(request, category):
     pass
