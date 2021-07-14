@@ -12,7 +12,7 @@ def post_list(request):
     # Pagination
     paginator = Paginator(post_list, 1) # Show 1 item per page.
     page = request.GET.get('page')
-    posts = paginator.get_page(page)
+    post_list = paginator.get_page(page)
 
     context = {
         'post_list': post_list,
