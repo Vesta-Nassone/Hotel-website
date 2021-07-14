@@ -11,6 +11,7 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='blog/', blank=True, null=True)
     # tags
+    tag = TaggableManager(blank=True)
     category = models.ForeignKey('Category', null=True, on_delete=models.SET_NULL)
     created = models.DateTimeField(default=timezone.now)
 
