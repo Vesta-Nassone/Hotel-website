@@ -35,4 +35,9 @@ def post_by_tag(request, tag):
     return render(request, 'post/post_list.html', context)
 
 def post_by_category(request, category):
-    pass
+    post_by_category = Post.objects.filter(category__category_name=category)
+    context ={
+        'post_list': post_by_category,
+    }
+
+    return render(request, 'post/post_list.html', context)
