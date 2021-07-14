@@ -11,23 +11,24 @@
           <div class="row align-items-center justify-content-center">
             <div class="col-md-7" data-aos="fade-up">
               <h2 class="heading">Blog Grid</h2>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo saepe dolorum dolorem, iste officia voluptates! Sint repudiandae, soluta voluptatem delectus iure, eaque, harum expedita, nisi aliquam magni odio perferendis ipsum!</p>
+              <p class="lead">Welcome to out Blog</p>
             </div>
           </div>
         </div>
       </div>
-    </div> <!-- .cover_1 -->
+    </div>
 
     <div class="section">
       <div class="container">
-        
         <div class="row mb-5">
         <!--Loops through the post list-->
           {% for post in post_list %}
             <div class="col-md-4">
                 <div class="media d-block media-bg-white mb-5" data-aos="fade-up"  data-aos-delay="400">
                 <figure>
-                    <a href="blog-single.html"><img src="{{post.image.url}}" alt="Image placeholder" class="img-fluid"></a>
+                    <a href="blog-single.html">
+                      <img src="{{post.image.url}}" alt="Image placeholder" class="img-fluid">
+                    </a>
                 </figure>
                 <div class="media-body">
                     <h3><a href="{% url 'blog:post_detail' post.id %}">{{post}}</a></h3>
