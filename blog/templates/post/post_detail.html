@@ -24,7 +24,7 @@
           </div>
         </div>
       </div>
-    </div> <!-- .cover_1 -->
+    </div> 
 
     <div class="section">
       <div class="container">
@@ -41,7 +41,7 @@
               </div>
             </div>
 
-
+          <!--Comment section-->
             <div class="pt-5 mt-5">
               <h3 class="mb-5"> Comments</h3>
               <ul class="comment-list">
@@ -52,7 +52,7 @@
                     </div>
                     <div class="comment-body">
                       <h3>{{comment.user}}</h3>
-                      <div class="meta">{{comment.created}}</div>
+                      <div class="meta">{{comment. }}</div>
                       <p>{{comment.content}}</p>
                     </div>
                   </li>
@@ -64,7 +64,7 @@
                 <h3 class="mb-5">Leave a comment</h3>
                 <form method="POST" class="p-5 bg-light">
                     {% csrf_token %}
-                    {% bootstrap_form form %}
+                    {% bootstrap_form comment_form %}
                     {% buttons %}
                         <button type="submit" class="btn btn-primary">Leave A Comment</button>
                     {% endbuttons %}
