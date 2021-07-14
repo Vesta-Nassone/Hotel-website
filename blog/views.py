@@ -21,12 +21,25 @@ def post_detail(request, id):
     form = CommentForm()
     all_tags = Tag.objects.all()
     comments = Comment.objects.filter(post=post_detail)
+    
+
+    if request.method == 'POST':
+        comment_form = CommentForm(request.POST)
+        if comment_form.is_valid():
+            new_comment = comment_form.save(commit=False)
+            new_comment.user = request.user
+            new_comment.post = post_detail
+            new_comment.save()
+        else:
+            comment_form = CommentForm()
+
     context ={
         'post_detail': post_detail,
         'categories': categories,
         'form': form,
         'all_tags': all_tags,
-        'comments': comments
+        'comments': comments,
+        'comment_form': comment_form
     }
 
     return render(request, 'post/post_detail.html', context)
