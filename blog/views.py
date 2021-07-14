@@ -1,6 +1,6 @@
 from django.shortcuts import render
 # imports the posts from the database.
-from .models import Post, Category
+from .models import Post, Category, Comment
 from .forms import CommentForm
 from taggit.models import Tag
 
@@ -20,11 +20,13 @@ def post_detail(request, id):
     categories = Category.objects.all()
     form = CommentForm()
     all_tags = Tag.objects.all()
+    comments = Comment.objects.filter(post=post_detail)
     context ={
         'post_detail': post_detail,
         'categories': categories,
         'form': form,
-        'all_tags': all_tags
+        'all_tags': all_tags,
+        'comments': comments
     }
 
     return render(request, 'post/post_detail.html', context)
