@@ -25,3 +25,9 @@ def post_detail(request, id):
     }
 
     return render(request, 'post/post_detail.html', context)
+
+def post_by_tag(request, tag):
+    pass
+
+def post_by_category(request, category):
+    pass
