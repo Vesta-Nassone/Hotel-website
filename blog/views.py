@@ -1,7 +1,7 @@
 from django.shortcuts import render
 # imports the posts from the database.
 from .models import Post, Category
-from .forms import NameForm
+from .forms import CommentForm
 from taggit.models import Tag
 
 # Create your views here.
@@ -18,7 +18,7 @@ def post_list(request):
 def post_detail(request, id):
     post_detail = Post.objects.get(id=id)
     categories = Category.objects.all()
-    form = NameForm()
+    form = CommentForm()
     all_tags = Tag.objects.all()
     context ={
         'post_detail': post_detail,
