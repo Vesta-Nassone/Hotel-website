@@ -41,11 +41,9 @@
             </div>
           {% endfor %}
         </div>
-
+        <!--Pagination-->
         <div class="row">
-          
           {% if post_list.has_other_pages %}
-
             <div class="col-md-12">
               <ul class="pagination custom-pagination">
                 {% if post_list.has_previous %}
@@ -63,21 +61,19 @@
                   
                 {% endfor %}
                 
-
                 {% if post_list.has_next %}
-                  <li class="page-item next"><a class="page-link" href="?page={{post_list.next_page_number}}"><i class="fa fa-angle-right"></i></a></li>
+                  <li class="page-item next">
+                    <a class="page-link" href="?page={{post_list.next_page_number}}">
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                  </li>
                 {% else %}
                   <li class="disabled"></li>
                 {% endif %} 
               </ul>
-
-
             </div>
           {% endif %}
         </div>
-    </div> <!-- .section -->
-  
-
-
-  </div> <!-- .main-wrap -->
+    </div>
+  </div>
 {% endblock body %}
