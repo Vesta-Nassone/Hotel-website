@@ -5,7 +5,7 @@ from .models import AboutUs, WhyChooseUs, Chefs
 def aboutus_list(request):
     about = AboutUs.objects.last()
     why_choose_us = WhyChooseUs.objects.all()
-    chef = Chefs.objects.last()
+    chef = Chefs.objects.all()
 
     context = {
         'about': about,
