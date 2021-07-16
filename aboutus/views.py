@@ -4,7 +4,7 @@ from .models import AboutUs, WhyChooseUs, Chefs
 # Create your views here.
 def aboutus_list(request):
     about = AboutUs.objects.last()
-    why_choose_us = WhyChooseUs.objects.last()
+    why_choose_us = WhyChooseUs.objects.all()
     chef = Chefs.objects.last()
 
     context = {
