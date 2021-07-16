@@ -10,6 +10,10 @@ class AboutUs(models.Model):
         verbose_name = _("about us")
         verbose_name_plural = _("about us")
 
+        def __str__(self):
+            return self.title
+        
+
 class WhyChooseUs(models.Model):
     title = models.CharField(max_length=50)
     content = models.TextField()
