@@ -30,7 +30,7 @@
         </div>
       </div>
     </div>
-
+    <!--Why choose us section-->
     <div class="section">
       <div class="container">
         <div class="row justify-content-center mb-5" data-aos="fade-up">
@@ -45,8 +45,8 @@
           </div>
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="accordion" id="accordion">
+            <!--Retrieves the title and content-->
               {% for info in why_choose_us %}
-
                 <div class="accordion-item">
                   <h3 class="mb-0">
                     <a class="btn-block p-3" data-toggle="collapse" href="#collapse{{info.id}}" role="button" aria-expanded="true" aria-controls="collapseOne">{{info.title}} <span class="icon"></span></a>
@@ -56,15 +56,13 @@
                       <p>{{info.content}}</p>
                     </div>
                   </div>
-                </div> <!-- .accordion-item -->
-
+                </div>
               {% endfor %}   
-
             </div>
           </div>
         </div>
       </div>
-    </div> <!-- .section -->
+    </div>
       
     <div class="section">
       <div class="container">
