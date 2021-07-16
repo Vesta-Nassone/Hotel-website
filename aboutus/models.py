@@ -14,6 +14,10 @@ class WhyChooseUs(models.Model):
     title = models.CharField(max_length=50)
     content = models.TextField()
 
+    class Meta:
+            verbose_name = _("why choose us")
+            verbose_name_plural = _("why choose us")
+
 class Chefs(models.Model):
     name = models.CharField(max_length=50)
     title = models.CharField(max_length=50)
