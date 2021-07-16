@@ -11,6 +11,7 @@ class WhyChooseUs(models.Model):
     content = models.TextField()
 
 class Chefs(models.Model):
-    name = ""
-    subtitle = ""
-    image = ""
+    name = models.CharField(max_length=50)
+    title = models.CharField(max_length=50)
+    bio = models.TextField()
+    image = models.ImageField(upload_to='chef/')
