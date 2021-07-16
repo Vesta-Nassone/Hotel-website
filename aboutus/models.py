@@ -23,3 +23,7 @@ class Chefs(models.Model):
     title = models.CharField(max_length=50)
     bio = models.TextField()
     image = models.ImageField(upload_to='chef/')
+
+    class Meta:
+            verbose_name = _("chef")
+            verbose_name_plural = _("chefs")
