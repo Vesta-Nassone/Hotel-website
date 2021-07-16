@@ -6,6 +6,10 @@ class AboutUs(models.Model):
     content = models.TextField()
     image = models.ImageField(upload_to='about_us/')
 
+    class Meta:
+        verbose_name = _("about us")
+        verbose_name_plural = _("about us")
+
 class WhyChooseUs(models.Model):
     title = models.CharField(max_length=50)
     content = models.TextField()
