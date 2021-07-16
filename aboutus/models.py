@@ -7,8 +7,8 @@ class AboutUs(models.Model):
     image = models.ImageField(upload_to='about_us/')
 
     class Meta:
-        verbose_name = _("about us")
-        verbose_name_plural = _("about us")
+        verbose_name = "about us"
+        verbose_name_plural = "about us"
 
         def __str__(self):
             return self.title
@@ -19,8 +19,8 @@ class WhyChooseUs(models.Model):
     content = models.TextField()
 
     class Meta:
-            verbose_name = _("why choose us")
-            verbose_name_plural = _("why choose us")
+            verbose_name = "why choose us"
+            verbose_name_plural = "why choose us"
 
             def __str__(self):
                 return self.title
@@ -33,8 +33,8 @@ class Chefs(models.Model):
     image = models.ImageField(upload_to='chef/')
 
     class Meta:
-            verbose_name = _("chef")
-            verbose_name_plural = _("chefs")
+            verbose_name = "chef"
+            verbose_name_plural = "chefs"
 
             def __str__(self):
                 return self.name
