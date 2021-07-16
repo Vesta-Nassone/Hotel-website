@@ -35,3 +35,7 @@ class Chefs(models.Model):
     class Meta:
             verbose_name = _("chef")
             verbose_name_plural = _("chefs")
+
+            def __str__(self):
+                return self.name
+            
