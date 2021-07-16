@@ -7,8 +7,8 @@ class AboutUs(models.Model):
     image = models.ImageField(upload_to='about_us/')
 
 class WhyChooseUs(models.Model):
-    title = ""
-    content = ""
+    title = models.CharField(max_length=50)
+    content = models.TextField()
 
 class Chefs(models.Model):
     name = ""
