@@ -2,4 +2,8 @@ from django.shortcuts import render
 
 # Create your views here.
 def home(request):
-    pass
+    context = {
+
+    }
+
+    return render(request, 'home/index.html', context)
