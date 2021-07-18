@@ -10,7 +10,7 @@ from django.core.paginator import Paginator
 def post_list(request):
     post_list = Post.objects.all()
     # Pagination
-    paginator = Paginator(post_list, 1) # Show 1 item per page.
+    paginator = Paginator(post_list, 3) # Show 1 item per page.
     page = request.GET.get('page')
     post_list = paginator.get_page(page)
 
