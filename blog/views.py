@@ -4,11 +4,18 @@ from .models import Post, Category, Comment
 from .forms import CommentForm
 from taggit.models import Tag
 from django.core.paginator import Paginator
+from django.db.models import Q
 
 # Create your views here.
 
 def post_list(request):
     post_list = Post.objects.all()
+    #searching for blog posts
+    search_query = request.GET.get('q')
+    if search_query:
+        post_list = post_list.filter(
+            Q(title__icontains = search_query)
+        )
     # Pagination
     paginator = Paginator(post_list, 3) # Show 1 item per page.
     page = request.GET.get('page')
