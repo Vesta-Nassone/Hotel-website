@@ -14,7 +14,8 @@ def post_list(request):
     search_query = request.GET.get('q')
     if search_query:
         post_list = post_list.filter(
-            Q(title__icontains = search_query)
+            Q(title__icontains = search_query) | 
+            Q(content__icontains = search_query)
         )
     # Pagination
     paginator = Paginator(post_list, 3) # Show 1 item per page.
