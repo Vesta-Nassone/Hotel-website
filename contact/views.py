@@ -15,7 +15,7 @@ def send_email(request):
                 send_mail(subject, message, from_email, ['admin@example.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid Header')
-            return redirect('send_success')
+            return redirect('contact:send_success')
 
 
     else:
