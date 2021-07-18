@@ -13,7 +13,7 @@ def send_email(request):
             from_email = form.cleaned_data['from_email']
             message = form.cleaned_data['message']
             try:
-                send_email(name, phone, from_email, message, ['admin@example.com'])
+                send_mail(name, message, from_email, ['admin@example.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid Header')
 
