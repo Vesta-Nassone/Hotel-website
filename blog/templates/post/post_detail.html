@@ -76,6 +76,7 @@
           <div class="col-md-4 sidebar">
             <div class="sidebar-box">
               <form action="{% url 'blog:post_list' %}" method="GET" class="search-form">
+              <!--Listen for input from q-->
                 <div class="form-group">
                   <span class="icon fa fa-search"></span>
                   <input type="text" class="form-control" name='q' value="{{request.Get.q}}" placeholder="Type a keyword and hit enter">
