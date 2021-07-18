@@ -17,7 +17,7 @@ def post_list(request):
             Q(title__icontains = search_query) | 
             Q(content__icontains = search_query) | 
             Q(tags__name__icontains = search_query)
-        )
+        ).distinct() #removes duplicate posts
     # Pagination
     paginator = Paginator(post_list, 3) # Show 1 item per page.
     page = request.GET.get('page')
