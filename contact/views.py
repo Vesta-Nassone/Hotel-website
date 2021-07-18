@@ -28,4 +28,4 @@ def send_email(request):
     return render(request, 'contact/contact.html', context)
 
 def send_success(request):
-    
+    return HttpResponse('Your email sent Successfully')
