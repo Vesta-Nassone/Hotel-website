@@ -14,7 +14,7 @@
           </div>
         </div>
       </div>
-    </div> <!-- .cover_1 -->
+    </div>
 
     <div class="section services-section">
       <div class="container">
@@ -77,14 +77,11 @@
           </div>
         </div>
       </div>
-    </div> <!-- .section -->
-    
+    </div>
+    <!--Meal Description section-->
     <div class="section pt-0 pb-0">
-
       <div class="menus d-flex bg-light">
-
         {% for meal in meals %}
-          
         <div class="d-flex item">
           <div class="image" style="background-image: url({{meal.image.url}});" data-aos="fade"></div>
           <div class="text">
@@ -92,7 +89,7 @@
             <p>{{meal.description|truncatewords:15}}</p>
             <p class="price">${{meal.price}}</p>
           </div>
-        </div> <!-- .item -->
+        </div>
 
         {% endfor %}
 
