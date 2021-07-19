@@ -4,10 +4,12 @@ from meals.models import Meals, Category
 # Create your views here.
 def home(request):
     meals = Meals.objects.all()
+    meals_list = Meals.objects.all()
     categories = Category.objects.all()
 
     context = {
-        'meals': meals
+        'meals': meals,
+        'meals_list': meals_list,
         'categories': categories,
 
     }
