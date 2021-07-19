@@ -8,12 +8,14 @@ def home(request):
     meals_list = Meals.objects.all()
     categories = Category.objects.all()
     posts = Post.objects.all()
+    latest_post = Post.objects.last()
 
     context = {
         'meals': meals,
         'meals_list': meals_list,
         'categories': categories,
         'posts': posts,
+        'latest_post': latest_post,
 
     }
 
