@@ -2,10 +2,13 @@ from django.db import models
 from django.utils.text import slugify
 
 # Create your models here.
+
+
 class Meals(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField(max_length=500)
-    category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True)
+    category = models.ForeignKey(
+        'Category', on_delete=models.SET_NULL, null=True)
     people = models.IntegerField()
     price = models.DecimalField(decimal_places=2, max_digits=5)
     preparation_time = models.IntegerField()
@@ -20,17 +23,17 @@ class Meals(models.Model):
     class Meta:
         verbose_name = 'meal'
         verbose_name_plural = 'meals'
-    
+
     def __str__(self):
         return self.name
+
 
 class Category(models.Model):
     name = models.CharField(max_length=30)
 
     def __str__(self):
         return self.name
-    
+
     class Meta:
         verbose_name = 'Category'
         verbose_name_plural = 'Categories'
-
